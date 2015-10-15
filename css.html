@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Equal Height</title>
+	<meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<style type="text/css">
+		body,div,iframe,ul,li{margin: 0px;padding: 0px;}
+		.item{width: 90%;margin: 20px auto;border:2px dotted #CCC;}
+		em{color: white;font-size: 20px;font-weight: bold;background-color: rgb(43,102,149);display: block;padding: 5px;border-radius: 5px;}
+		p,xmp{text-indent: 2em;font-size: 15px;font-weight: bold;}
+		article{display: none;}
+	</style>
+</head>
+<body>
+	<div class="item">
+		<em>style样式表写在body内和head内</em>
+		<article>
+			<p>style样式表分为外部样式表，内页样式表和行间样式，优先级依次升高。样式表可以加载在任何位置，有时写在body内和相应HTML写在一起，是为了保证开发效率，方便后期的更改，减轻公共样式表加载的负担。</p>
+		</article>
+		
+	</div>
+	<div class="item">
+		<em>常用功能标签</em>
+		<article>
+			<p><xmp><pre>标签用于原样式输出。</xmp></p>
+			<p><xmp><xmp>标签用于输出标签。</xmp></p>
+		</article>
+		
+	</div>
+	<div class="item">
+		<em>语意化标签</em>
+		<article>
+		<pre><xmp>
+	默认样式是浏览器设定的一些标签的表现形式，而语义化的目的就是直观的看到标签和属性的用途，有结构意义。
+	比如<span><div>无意义。
+	比如<h1>就是用来标题，它的样式就是加粗和较大字号；而<strong><em>用来区分其他文字，表强调作用，
+	<p>段落，<br>换行，<title>标题，<table>表格，<list>列表,
+	<label>标签和<input>搭配使用，label中的for匹配input中的id。
+	<caption>用来表示表格的标题，还有<thead>表头，<th>列头，<tbody>，<address>表示文档的联系信息，表现为斜体，有折行。
+	语义化的好处最主要的就是对浏览器友好，结构更好，容易被搜索引擎抓取（SEO的优化），方便推广。
+	即时不定义CSS样式表，你的文档也是有意义的。
+	还可以从数据和文档中分离出意义，结构清晰，方便开发者的维护。
+		</xmp></pre>
+		</article>
+		
+	</div>
+	<div class="item">
+		<em>img 的title & alt</em>
+		<p>title表示鼠标放置时显示的内容，alt显示的是图片缺失时显示的内容，alt对SEO非常友好，所以应当为所有的图片添加alt。</p>
+	</div>
+	<div class="item">
+		<em>CSS选择器的实现</em>
+		<pre><xmp>
+	#a b.c .d + e:first-child > f[data = "hello world!"]
+	//首先在选择器元素钱加空格，再对[]内的数据操作，去掉=两边的空格，去掉""，将字符串中的空格替换为不常用的临时字符串
+	#a b.c .d +e :first-child >f [data=hello0xdh20156world!]
+	//使用格式化后的数据取节点函数('CSS选择符'，上一次结果)
+	取节点函数('#a',上一次操作的结果)
+	//将CSS选择器解释为具体的DOM树操作
+	#a应当解析成：document.getElementById('a')
+		</xmp></pre>
+	</div>
+	<div class="item">
+		<em>CSS继承</em>
+		<p>CSS的继承是自然而然的，例如字体，但有些属性是不能被继承的，比如Padding，border。多种样式混合使用时，使用权重来确定最终样式。
+		统计ID数，统计class数，统计标签数，并依次写出一个三位数作为权重。在行间样式权重为100。如果想要设置某个属性重要，在分号之前写上！important，权重为1000。</p>
+	</div>
+	<div class="item">
+		<em>CSS选择器优先级</em>
+		<p>1.id选择器（#myid）2.类选择器（.myclassname）3.标签选择器（div,h1,p）4.相邻选择器（h1+p）5.子选择器（ul < li）6.后代选择器（li a）7.通配符选择器（*）8.属性选择器（a[rel="external"]）9.伪类选择器（a:hover,li:nth-child）</p>
+	</div>
+	<div class="item">
+		<em>CSS盒子模型</em>
+		<p>每个盒子都有内容，填充，边框，边界。四个属性又分为上下左右，其中也有颜色，大小。</p>
+	</div>
+	<div class="item">
+		<em>增加链接的可点击面积</em>
+		<p>链接一般被设计inline（内嵌元素），使得可点击区域过小，可以把链接改为block，这样就能自动填充它的父级元素，如果想要填充高度的话，可以设置height或者line-height。</p>
+	</div>
+	<div class="item">
+		<em>display & visibility</em>
+		<p>display:inline||block||inline-block||list-item||none... visibility:visible||hidden。其中visibility用来控制元素是否可见，虽然被隐藏，但仍占据原来的位置，不能接收事件。而display实际上是设置了元素的浮动特性，当设置为none的时候相当于被移走。</p>
+	</div>
+	<div class="item">
+		<em>table布局和Div布局</em>
+		<p>Div布局使内容和形式分离，页面加载速度更快。修改网站时代价更小。保持视觉一致性。SEO。</p>
+	</div>
+	<div class="item">
+		<em>增加链接的可点击面积</em>
+		<p>链接一般被设计inline（内嵌元素），使得可点击区域过小，可以把链接改为block，这样就能自动填充它的父级元素，如果想要填充高度的话，可以设置height或者line-height。</p>
+	</div>
+	<div class="item">
+		<em>增加链接的可点击面积</em>
+		<p>链接一般被设计inline（内嵌元素），使得可点击区域过小，可以把链接改为block，这样就能自动填充它的父级元素，如果想要填充高度的话，可以设置height或者line-height。</p>
+	</div>
+	<div class="item">
+		<em>零碎知识点</em>
+		<pre>
+	background:url('urlString') no-repeat 10px 15px;
+		</pre>
+	</div>
+	<div class="item">
+		<em>未完</em>
+		<pre>
+		</pre>
+	</div>
+	
+</body>
+</html>
